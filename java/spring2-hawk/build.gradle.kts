@@ -31,7 +31,7 @@ dependencies {
     compileOnly("org.apache.tomcat.embed:tomcat-embed-core:9.0.44")
 
     implementation("commons-io:commons-io:2.15.1")
-    implementation(project(":core"))
+    api(project(":core"))
 }
 
 tasks.getByName<Test>("test") {

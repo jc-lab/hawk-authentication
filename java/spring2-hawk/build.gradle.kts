@@ -31,6 +31,10 @@ tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
 
+tasks.bootJar {
+    enabled = false
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {

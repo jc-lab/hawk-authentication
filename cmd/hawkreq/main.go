@@ -30,6 +30,11 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
+
+	if contentType != "" {
+		req.Header.Set("content-type", contentType)
+	}
+
 	res, err := s.Do(req)
 	if err != nil {
 		log.Fatalln(err)
